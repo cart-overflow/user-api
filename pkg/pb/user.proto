@@ -1,0 +1,52 @@
+
+syntax = "proto3";
+package user;
+
+option go_package = "./pkg/pb";
+
+service UserService {
+    rpc GetOAuthUrl(GetOAuthUrlRequest) returns (GetOAuthUrlResponse);
+    rpc ExchangeCode(ExchangeCodeRequest) returns (ExhangeCodeResponse);
+    rpc TokenRefresh(TokenRefreshRequest) returns (TokenRefreshResponse);
+}
+
+// GetOAuthUrl
+
+message GetOAuthUrlRequest {
+    OAuthProvider provider = 1;
+    string redirect_url = 2;
+}
+
+enum OAuthProvider {
+    unknown = 0;
+    google = 1;
+}
+
+message GetOAuthUrlResponse {
+    string url = 1;
+    string state = 2;
+}
+
+// ExchangeCode
+
+message ExchangeCodeRequest {
+    string code = 1;
+    string client_state = 2;
+    string redirect_state = 3;
+}
+
+message ExhangeCodeResponse {
+    string access_token = 1;
+    string refresh_token = 2;
+}
+
+// TokenRefresh
+
+message TokenRefreshRequest {
+    string refresh_token = 1;
+}
+
+message TokenRefreshResponse {
+    string access_token = 1;
+    string refresh_token = 2;
+}

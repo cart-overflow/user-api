@@ -1,0 +1,4 @@
+commit-msg:
+  jobs:
+    - name: Commit message check
+      run: ./scripts/commit-message-check.sh {0}
