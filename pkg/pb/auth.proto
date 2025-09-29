@@ -1,10 +1,10 @@
 
 syntax = "proto3";
-package user;
+package auth;
 
 option go_package = "./pkg/pb";
 
-service UserService {
+service AuthService {
     rpc GetOAuthUrl(GetOAuthUrlRequest) returns (GetOAuthUrlResponse);
     rpc ExchangeCode(ExchangeCodeRequest) returns (ExhangeCodeResponse);
     rpc TokenRefresh(TokenRefreshRequest) returns (TokenRefreshResponse);

@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+package auth;
+
+option go_package = "./pkg/pb";
+
+service ProfileService {
+    rpc GetProfile(GetProfileRequest) returns (GetProfileResponse);
+}
+
+message GetProfileRequest {
+    string user_id = 1;
+}
+
+message GetProfileResponse {
+    string user_id = 1;
+    string profile_id = 2;
+    string name = 3;
+    string email = 4;
+    string registration_date = 5;
+}

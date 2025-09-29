@@ -5,6 +5,6 @@ setup:
 
 # Generate Go code from Protocol Buffer files
 gen-proto:
-	protoc --go_out=. --go-grpc_out=. pkg/pb/user.proto
+	protoc --go_out=. --go-grpc_out=. pkg/pb/auth.proto pkg/pb/profile.proto
 
 .PHONY: setup gen-proto

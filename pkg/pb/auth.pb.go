@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.7
 // 	protoc        v6.32.0
-// source: pkg/pb/user.proto
+// source: pkg/pb/auth.proto
 
 package pb
 
@@ -51,11 +51,11 @@ func (x OAuthProvider) String() string {
 }
 
 func (OAuthProvider) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_pb_user_proto_enumTypes[0].Descriptor()
+	return file_pkg_pb_auth_proto_enumTypes[0].Descriptor()
 }
 
 func (OAuthProvider) Type() protoreflect.EnumType {
-	return &file_pkg_pb_user_proto_enumTypes[0]
+	return &file_pkg_pb_auth_proto_enumTypes[0]
 }
 
 func (x OAuthProvider) Number() protoreflect.EnumNumber {
@@ -64,12 +64,12 @@ func (x OAuthProvider) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use OAuthProvider.Descriptor instead.
 func (OAuthProvider) EnumDescriptor() ([]byte, []int) {
-	return file_pkg_pb_user_proto_rawDescGZIP(), []int{0}
+	return file_pkg_pb_auth_proto_rawDescGZIP(), []int{0}
 }
 
 type GetOAuthUrlRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Provider      OAuthProvider          `protobuf:"varint,1,opt,name=provider,proto3,enum=user.OAuthProvider" json:"provider,omitempty"`
+	Provider      OAuthProvider          `protobuf:"varint,1,opt,name=provider,proto3,enum=auth.OAuthProvider" json:"provider,omitempty"`
 	RedirectUrl   string                 `protobuf:"bytes,2,opt,name=redirect_url,json=redirectUrl,proto3" json:"redirect_url,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -77,7 +77,7 @@ type GetOAuthUrlRequest struct {
 
 func (x *GetOAuthUrlRequest) Reset() {
 	*x = GetOAuthUrlRequest{}
-	mi := &file_pkg_pb_user_proto_msgTypes[0]
+	mi := &file_pkg_pb_auth_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -89,7 +89,7 @@ func (x *GetOAuthUrlRequest) String() string {
 func (*GetOAuthUrlRequest) ProtoMessage() {}
 
 func (x *GetOAuthUrlRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_pb_user_proto_msgTypes[0]
+	mi := &file_pkg_pb_auth_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -102,7 +102,7 @@ func (x *GetOAuthUrlRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetOAuthUrlRequest.ProtoReflect.Descriptor instead.
 func (*GetOAuthUrlRequest) Descriptor() ([]byte, []int) {
-	return file_pkg_pb_user_proto_rawDescGZIP(), []int{0}
+	return file_pkg_pb_auth_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *GetOAuthUrlRequest) GetProvider() OAuthProvider {
@@ -129,7 +129,7 @@ type GetOAuthUrlResponse struct {
 
 func (x *GetOAuthUrlResponse) Reset() {
 	*x = GetOAuthUrlResponse{}
-	mi := &file_pkg_pb_user_proto_msgTypes[1]
+	mi := &file_pkg_pb_auth_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -141,7 +141,7 @@ func (x *GetOAuthUrlResponse) String() string {
 func (*GetOAuthUrlResponse) ProtoMessage() {}
 
 func (x *GetOAuthUrlResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_pb_user_proto_msgTypes[1]
+	mi := &file_pkg_pb_auth_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -154,7 +154,7 @@ func (x *GetOAuthUrlResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetOAuthUrlResponse.ProtoReflect.Descriptor instead.
 func (*GetOAuthUrlResponse) Descriptor() ([]byte, []int) {
-	return file_pkg_pb_user_proto_rawDescGZIP(), []int{1}
+	return file_pkg_pb_auth_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *GetOAuthUrlResponse) GetUrl() string {
@@ -182,7 +182,7 @@ type ExchangeCodeRequest struct {
 
 func (x *ExchangeCodeRequest) Reset() {
 	*x = ExchangeCodeRequest{}
-	mi := &file_pkg_pb_user_proto_msgTypes[2]
+	mi := &file_pkg_pb_auth_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -194,7 +194,7 @@ func (x *ExchangeCodeRequest) String() string {
 func (*ExchangeCodeRequest) ProtoMessage() {}
 
 func (x *ExchangeCodeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_pb_user_proto_msgTypes[2]
+	mi := &file_pkg_pb_auth_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -207,7 +207,7 @@ func (x *ExchangeCodeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ExchangeCodeRequest.ProtoReflect.Descriptor instead.
 func (*ExchangeCodeRequest) Descriptor() ([]byte, []int) {
-	return file_pkg_pb_user_proto_rawDescGZIP(), []int{2}
+	return file_pkg_pb_auth_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *ExchangeCodeRequest) GetCode() string {
@@ -241,7 +241,7 @@ type ExhangeCodeResponse struct {
 
 func (x *ExhangeCodeResponse) Reset() {
 	*x = ExhangeCodeResponse{}
-	mi := &file_pkg_pb_user_proto_msgTypes[3]
+	mi := &file_pkg_pb_auth_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -253,7 +253,7 @@ func (x *ExhangeCodeResponse) String() string {
 func (*ExhangeCodeResponse) ProtoMessage() {}
 
 func (x *ExhangeCodeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_pb_user_proto_msgTypes[3]
+	mi := &file_pkg_pb_auth_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -266,7 +266,7 @@ func (x *ExhangeCodeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ExhangeCodeResponse.ProtoReflect.Descriptor instead.
 func (*ExhangeCodeResponse) Descriptor() ([]byte, []int) {
-	return file_pkg_pb_user_proto_rawDescGZIP(), []int{3}
+	return file_pkg_pb_auth_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *ExhangeCodeResponse) GetAccessToken() string {
@@ -292,7 +292,7 @@ type TokenRefreshRequest struct {
 
 func (x *TokenRefreshRequest) Reset() {
 	*x = TokenRefreshRequest{}
-	mi := &file_pkg_pb_user_proto_msgTypes[4]
+	mi := &file_pkg_pb_auth_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -304,7 +304,7 @@ func (x *TokenRefreshRequest) String() string {
 func (*TokenRefreshRequest) ProtoMessage() {}
 
 func (x *TokenRefreshRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_pb_user_proto_msgTypes[4]
+	mi := &file_pkg_pb_auth_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -317,7 +317,7 @@ func (x *TokenRefreshRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TokenRefreshRequest.ProtoReflect.Descriptor instead.
 func (*TokenRefreshRequest) Descriptor() ([]byte, []int) {
-	return file_pkg_pb_user_proto_rawDescGZIP(), []int{4}
+	return file_pkg_pb_auth_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *TokenRefreshRequest) GetRefreshToken() string {
@@ -337,7 +337,7 @@ type TokenRefreshResponse struct {
 
 func (x *TokenRefreshResponse) Reset() {
 	*x = TokenRefreshResponse{}
-	mi := &file_pkg_pb_user_proto_msgTypes[5]
+	mi := &file_pkg_pb_auth_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -349,7 +349,7 @@ func (x *TokenRefreshResponse) String() string {
 func (*TokenRefreshResponse) ProtoMessage() {}
 
 func (x *TokenRefreshResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_pb_user_proto_msgTypes[5]
+	mi := &file_pkg_pb_auth_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -362,7 +362,7 @@ func (x *TokenRefreshResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TokenRefreshResponse.ProtoReflect.Descriptor instead.
 func (*TokenRefreshResponse) Descriptor() ([]byte, []int) {
-	return file_pkg_pb_user_proto_rawDescGZIP(), []int{5}
+	return file_pkg_pb_auth_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *TokenRefreshResponse) GetAccessToken() string {
@@ -379,13 +379,13 @@ func (x *TokenRefreshResponse) GetRefreshToken() string {
 	return ""
 }
 
-var File_pkg_pb_user_proto protoreflect.FileDescriptor
+var File_pkg_pb_auth_proto protoreflect.FileDescriptor
 
-const file_pkg_pb_user_proto_rawDesc = "" +
+const file_pkg_pb_auth_proto_rawDesc = "" +
 	"\n" +
-	"\x11pkg/pb/user.proto\x12\x04user\"h\n" +
+	"\x11pkg/pb/auth.proto\x12\x04auth\"h\n" +
 	"\x12GetOAuthUrlRequest\x12/\n" +
-	"\bprovider\x18\x01 \x01(\x0e2\x13.user.OAuthProviderR\bprovider\x12!\n" +
+	"\bprovider\x18\x01 \x01(\x0e2\x13.auth.OAuthProviderR\bprovider\x12!\n" +
 	"\fredirect_url\x18\x02 \x01(\tR\vredirectUrl\"=\n" +
 	"\x13GetOAuthUrlResponse\x12\x10\n" +
 	"\x03url\x18\x01 \x01(\tR\x03url\x12\x14\n" +
@@ -406,43 +406,43 @@ const file_pkg_pb_user_proto_rawDesc = "" +
 	"\aunknown\x10\x00\x12\n" +
 	"\n" +
 	"\x06google\x10\x012\xde\x01\n" +
-	"\vUserService\x12B\n" +
-	"\vGetOAuthUrl\x12\x18.user.GetOAuthUrlRequest\x1a\x19.user.GetOAuthUrlResponse\x12D\n" +
-	"\fExchangeCode\x12\x19.user.ExchangeCodeRequest\x1a\x19.user.ExhangeCodeResponse\x12E\n" +
-	"\fTokenRefresh\x12\x19.user.TokenRefreshRequest\x1a\x1a.user.TokenRefreshResponseB\n" +
+	"\vAuthService\x12B\n" +
+	"\vGetOAuthUrl\x12\x18.auth.GetOAuthUrlRequest\x1a\x19.auth.GetOAuthUrlResponse\x12D\n" +
+	"\fExchangeCode\x12\x19.auth.ExchangeCodeRequest\x1a\x19.auth.ExhangeCodeResponse\x12E\n" +
+	"\fTokenRefresh\x12\x19.auth.TokenRefreshRequest\x1a\x1a.auth.TokenRefreshResponseB\n" +
 	"Z\b./pkg/pbb\x06proto3"
 
 var (
-	file_pkg_pb_user_proto_rawDescOnce sync.Once
-	file_pkg_pb_user_proto_rawDescData []byte
+	file_pkg_pb_auth_proto_rawDescOnce sync.Once
+	file_pkg_pb_auth_proto_rawDescData []byte
 )
 
-func file_pkg_pb_user_proto_rawDescGZIP() []byte {
-	file_pkg_pb_user_proto_rawDescOnce.Do(func() {
-		file_pkg_pb_user_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_pkg_pb_user_proto_rawDesc), len(file_pkg_pb_user_proto_rawDesc)))
+func file_pkg_pb_auth_proto_rawDescGZIP() []byte {
+	file_pkg_pb_auth_proto_rawDescOnce.Do(func() {
+		file_pkg_pb_auth_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_pkg_pb_auth_proto_rawDesc), len(file_pkg_pb_auth_proto_rawDesc)))
 	})
-	return file_pkg_pb_user_proto_rawDescData
+	return file_pkg_pb_auth_proto_rawDescData
 }
 
-var file_pkg_pb_user_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_pkg_pb_user_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
-var file_pkg_pb_user_proto_goTypes = []any{
-	(OAuthProvider)(0),           // 0: user.OAuthProvider
-	(*GetOAuthUrlRequest)(nil),   // 1: user.GetOAuthUrlRequest
-	(*GetOAuthUrlResponse)(nil),  // 2: user.GetOAuthUrlResponse
-	(*ExchangeCodeRequest)(nil),  // 3: user.ExchangeCodeRequest
-	(*ExhangeCodeResponse)(nil),  // 4: user.ExhangeCodeResponse
-	(*TokenRefreshRequest)(nil),  // 5: user.TokenRefreshRequest
-	(*TokenRefreshResponse)(nil), // 6: user.TokenRefreshResponse
+var file_pkg_pb_auth_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
+var file_pkg_pb_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
+var file_pkg_pb_auth_proto_goTypes = []any{
+	(OAuthProvider)(0),           // 0: auth.OAuthProvider
+	(*GetOAuthUrlRequest)(nil),   // 1: auth.GetOAuthUrlRequest
+	(*GetOAuthUrlResponse)(nil),  // 2: auth.GetOAuthUrlResponse
+	(*ExchangeCodeRequest)(nil),  // 3: auth.ExchangeCodeRequest
+	(*ExhangeCodeResponse)(nil),  // 4: auth.ExhangeCodeResponse
+	(*TokenRefreshRequest)(nil),  // 5: auth.TokenRefreshRequest
+	(*TokenRefreshResponse)(nil), // 6: auth.TokenRefreshResponse
 }
-var file_pkg_pb_user_proto_depIdxs = []int32{
-	0, // 0: user.GetOAuthUrlRequest.provider:type_name -> user.OAuthProvider
-	1, // 1: user.UserService.GetOAuthUrl:input_type -> user.GetOAuthUrlRequest
-	3, // 2: user.UserService.ExchangeCode:input_type -> user.ExchangeCodeRequest
-	5, // 3: user.UserService.TokenRefresh:input_type -> user.TokenRefreshRequest
-	2, // 4: user.UserService.GetOAuthUrl:output_type -> user.GetOAuthUrlResponse
-	4, // 5: user.UserService.ExchangeCode:output_type -> user.ExhangeCodeResponse
-	6, // 6: user.UserService.TokenRefresh:output_type -> user.TokenRefreshResponse
+var file_pkg_pb_auth_proto_depIdxs = []int32{
+	0, // 0: auth.GetOAuthUrlRequest.provider:type_name -> auth.OAuthProvider
+	1, // 1: auth.AuthService.GetOAuthUrl:input_type -> auth.GetOAuthUrlRequest
+	3, // 2: auth.AuthService.ExchangeCode:input_type -> auth.ExchangeCodeRequest
+	5, // 3: auth.AuthService.TokenRefresh:input_type -> auth.TokenRefreshRequest
+	2, // 4: auth.AuthService.GetOAuthUrl:output_type -> auth.GetOAuthUrlResponse
+	4, // 5: auth.AuthService.ExchangeCode:output_type -> auth.ExhangeCodeResponse
+	6, // 6: auth.AuthService.TokenRefresh:output_type -> auth.TokenRefreshResponse
 	4, // [4:7] is the sub-list for method output_type
 	1, // [1:4] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
@@ -450,27 +450,27 @@ var file_pkg_pb_user_proto_depIdxs = []int32{
 	0, // [0:1] is the sub-list for field type_name
 }
 
-func init() { file_pkg_pb_user_proto_init() }
-func file_pkg_pb_user_proto_init() {
-	if File_pkg_pb_user_proto != nil {
+func init() { file_pkg_pb_auth_proto_init() }
+func file_pkg_pb_auth_proto_init() {
+	if File_pkg_pb_auth_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_pkg_pb_user_proto_rawDesc), len(file_pkg_pb_user_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_pkg_pb_auth_proto_rawDesc), len(file_pkg_pb_auth_proto_rawDesc)),
 			NumEnums:      1,
 			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_pkg_pb_user_proto_goTypes,
-		DependencyIndexes: file_pkg_pb_user_proto_depIdxs,
-		EnumInfos:         file_pkg_pb_user_proto_enumTypes,
-		MessageInfos:      file_pkg_pb_user_proto_msgTypes,
+		GoTypes:           file_pkg_pb_auth_proto_goTypes,
+		DependencyIndexes: file_pkg_pb_auth_proto_depIdxs,
+		EnumInfos:         file_pkg_pb_auth_proto_enumTypes,
+		MessageInfos:      file_pkg_pb_auth_proto_msgTypes,
 	}.Build()
-	File_pkg_pb_user_proto = out.File
-	file_pkg_pb_user_proto_goTypes = nil
-	file_pkg_pb_user_proto_depIdxs = nil
+	File_pkg_pb_auth_proto = out.File
+	file_pkg_pb_auth_proto_goTypes = nil
+	file_pkg_pb_auth_proto_depIdxs = nil
 }
