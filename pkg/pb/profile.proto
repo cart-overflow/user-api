@@ -2,6 +2,8 @@
 syntax = "proto3";
 package auth;
 
+import "google/protobuf/timestamp.proto";
+
 option go_package = "./pkg/pb";
 
 service ProfileService {
@@ -17,5 +19,5 @@ message GetProfileResponse {
     string profile_id = 2;
     string name = 3;
     string email = 4;
-    string registration_date = 5;
+    google.protobuf.Timestamp registration_date = 5;
 }
