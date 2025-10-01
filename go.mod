@@ -3,6 +3,7 @@ module github.com/cart-overflow/user-api
 go 1.24.1
 
 require (
+	github.com/golang-jwt/jwt/v5 v5.3.0
 	google.golang.org/grpc v1.75.0
 	google.golang.org/protobuf v1.36.7
 )
