@@ -146,7 +146,7 @@ var File_pkg_pb_profile_proto protoreflect.FileDescriptor
 
 const file_pkg_pb_profile_proto_rawDesc = "" +
 	"\n" +
-	"\x14pkg/pb/profile.proto\x12\x04auth\x1a\x1fgoogle/protobuf/timestamp.proto\",\n" +
+	"\x14pkg/pb/profile.proto\x12\aprofile\x1a\x1fgoogle/protobuf/timestamp.proto\",\n" +
 	"\x11GetProfileRequest\x12\x17\n" +
 	"\auser_id\x18\x01 \x01(\tR\x06userId\"\xbf\x01\n" +
 	"\x12GetProfileResponse\x12\x17\n" +
@@ -155,10 +155,10 @@ const file_pkg_pb_profile_proto_rawDesc = "" +
 	"profile_id\x18\x02 \x01(\tR\tprofileId\x12\x12\n" +
 	"\x04name\x18\x03 \x01(\tR\x04name\x12\x14\n" +
 	"\x05email\x18\x04 \x01(\tR\x05email\x12G\n" +
-	"\x11registration_date\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampR\x10registrationDate2Q\n" +
-	"\x0eProfileService\x12?\n" +
+	"\x11registration_date\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampR\x10registrationDate2W\n" +
+	"\x0eProfileService\x12E\n" +
 	"\n" +
-	"GetProfile\x12\x17.auth.GetProfileRequest\x1a\x18.auth.GetProfileResponseB\n" +
+	"GetProfile\x12\x1a.profile.GetProfileRequest\x1a\x1b.profile.GetProfileResponseB\n" +
 	"Z\b./pkg/pbb\x06proto3"
 
 var (
@@ -175,14 +175,14 @@ func file_pkg_pb_profile_proto_rawDescGZIP() []byte {
 
 var file_pkg_pb_profile_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_pkg_pb_profile_proto_goTypes = []any{
-	(*GetProfileRequest)(nil),     // 0: auth.GetProfileRequest
-	(*GetProfileResponse)(nil),    // 1: auth.GetProfileResponse
+	(*GetProfileRequest)(nil),     // 0: profile.GetProfileRequest
+	(*GetProfileResponse)(nil),    // 1: profile.GetProfileResponse
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 }
 var file_pkg_pb_profile_proto_depIdxs = []int32{
-	2, // 0: auth.GetProfileResponse.registration_date:type_name -> google.protobuf.Timestamp
-	0, // 1: auth.ProfileService.GetProfile:input_type -> auth.GetProfileRequest
-	1, // 2: auth.ProfileService.GetProfile:output_type -> auth.GetProfileResponse
+	2, // 0: profile.GetProfileResponse.registration_date:type_name -> google.protobuf.Timestamp
+	0, // 1: profile.ProfileService.GetProfile:input_type -> profile.GetProfileRequest
+	1, // 2: profile.ProfileService.GetProfile:output_type -> profile.GetProfileResponse
 	2, // [2:3] is the sub-list for method output_type
 	1, // [1:2] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
