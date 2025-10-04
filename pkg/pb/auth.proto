@@ -10,7 +10,7 @@ service AuthService {
     rpc TokenRefresh(TokenRefreshRequest) returns (TokenRefreshResponse);
 }
 
-// GetOAuthUrl
+// MARK: - GetOAuthUrl
 
 message GetOAuthUrlRequest {
     OAuthProvider provider = 1;
@@ -27,7 +27,7 @@ message GetOAuthUrlResponse {
     string state = 2;
 }
 
-// ExchangeCode
+// MARK: - ExchangeCode
 
 message ExchangeCodeRequest {
     string code = 1;
@@ -40,7 +40,7 @@ message ExhangeCodeResponse {
     string refresh_token = 2;
 }
 
-// TokenRefresh
+// MARK: - TokenRefresh
 
 message TokenRefreshRequest {
     string refresh_token = 1;
